@@ -21,7 +21,7 @@ function Navbar() {
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
                     </svg>
                 </button>
-                {navbar_state.navbar && <div id="mega-menu-full" className="items-center justify-between font-medium w-full md:flex md:w-auto md:order-1">
+                <div id="mega-menu-full" className={`items-center justify-between font-medium w-full md:flex md:w-auto md:order-1 ${!navbar_state.navbar && 'hidden'}`}>
                     <ul className="flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white">
                         <li>
                             <a href="#" className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0" aria-current="page">Home</a>
@@ -41,7 +41,7 @@ function Navbar() {
                             <a href="#" className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">Contact</a>
                         </li>
                     </ul>
-                </div>}
+                </div>
             </div>
             {navbar_state.dropdown && <div id="mega-menu-full-dropdown" className="mt-1 border-gray-200 shadow-sm bg-gray-50 md:bg-white border-y">
                 <div className="grid max-w-screen-xl px-4 py-5 mx-auto text-gray-900 sm:grid-cols-2 md:px-6">
